@@ -36,11 +36,13 @@ class StoreSurveyRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string',
             'user_id' => 'exists:users,id',
+            'image' => 'nullable|string',
+            'title' => 'required|string',
             'status' => 'required|boolean',
             'description' => 'nullable|string',
             'expired_at' => 'nullable|date|after:tomorrow',
+            'questions' => 'array',
         ];
     }
 }

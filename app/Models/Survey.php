@@ -14,6 +14,7 @@ class Survey extends Model
 
     protected $fillable = [
         'user_id',
+        'image',
         'title',
         'slug',
         'status',
